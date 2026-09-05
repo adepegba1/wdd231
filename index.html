@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="author" content="David Adepegba">
+
+    <meta name="description"
+        content="This assignment demonstrates your prerequisite knowledge by applying HTML, CSS, and JavaScript to the design and development of your course home page.">
+
+    <title>David Adepegaba | Course Home page</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="styles/base.css">
+
+    <script src="scripts/navigation.js" defer></script>
+</head>
+
+<body>
+    <header>
+
+        <img src="images/logo.svg" alt="Logo">
+        <span>D Analyst</span>
+        <button id="ham-btn" class="hamburger"></button>
+
+    </header>
+
+    <nav id="nav-bar" class="navigation">
+        <ul>
+            <li class="current"><a href="#">Home</a></li>
+            <li><a href="">Chamber Project</a></li>
+            <li><a href="">Final Project</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>Home</h1>
+        <div class="top">
+            <section class="about">
+                <h2>About Me</h2>
+                <p>My name is David Adepegba. I am a Data Analyst who enjoys
+                    working with data, technology, and web development.
+                    I am currently learning frontend web development and
+                    software development. I enjoy building useful websites
+                    and using technology to solve real-world problems.</p>
+
+            </section>
+
+            <section class="photo">
+                <h2>Student Photo</h2>
+                <img src="images/Passport_1.jpeg" alt="Photo of David Adepegba">
+            </section>
+        </div>
+
+        <section class="certificate">
+            <h2>Web Certificate Course</h2>
+            <div class="course-btn">
+                <button id="all-btn" class="active" type="button">ALL</button>
+
+                <button id="wdd-btn" type="button">WDD</button>
+
+                <button id="cse-btn" type="button">CSE</button>
+            </div>
+            <div id="course-container" class="course-container"></div>
+            <p id="credit-total" class="credit-total"></p>
+        </section>
+    </main>
+    <footer>
+        <div class="social-links">
+            <a href="https://github.com/adepegba1"><img src="images/github.svg" alt="Github Logo"></a>
+            <a href="https://www.linkedin.com/in/adepegbadavid1/"><img src="images/linkedin.svg"
+                    alt="LinkedIn Logo"></a>
+            <a href=""><img src="images/twitter.svg" alt="X Logo"></a>
+
+        </div>
+        <p> &copy; <span id="currentyear"></span>David Adepegba | Nigeria</p>
+
+        <p>Last modification: <span id="lastModified"></span>
+        </p>
+    </footer>
+</body>
+
+</html>
