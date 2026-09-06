@@ -96,7 +96,7 @@ const allButton = document.querySelector("#all-btn");
 
 const wddButton = document.querySelector("#wdd-btn");
 
-const csebutton = document.querySelector("#cse-btn");
+const cseButton = document.querySelector("#cse-btn");
 
 // DISPLAY COURSE
 function displayCourses(courseList) {
@@ -155,8 +155,10 @@ allButton.addEventListener("click", () => {
 });
 
 wddButton.addEventListener("click", () => {
-  const wddCourses = courses.filter((courses) => course.subject === "WDD");
+  const wddCourses = courses.filter((course) => course.subject === "WDD");
+
   displayCourses(wddCourses);
+
   setActiveButton(wddButton);
 });
 
