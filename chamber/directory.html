@@ -5,17 +5,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="David Adepegba">
-    <meta name="description" content="">
+    <meta name="description"
+        content="Browse the Lagos Chamber of Commerce business directory — find contact details, addresses, and websites for member companies across Lagos, Nigeria.">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- Facebook meta -->
-    <meta og:title="" content="">
-    <meta og:description="" content="">
-    <meta og:image="" content="">
-    <meta og:url="" content="">
-    <title>Lagos Chamber of Commerce</title>
+    <meta property="og:title" content="Lagos Chamber of Commerce — Business Directory">
+    <meta property="og:description"
+        content="Explore member businesses of the Lagos Chamber of Commerce. Search by grid or list view to find company contact info, addresses, and websites.">
+    <meta property="og:image" content="images/chamber-logo.svg">
+    <meta property="og:url" content="https://adepegba1.github.io/wdd231/chamber/directory.html">
+    <title>Directory of Lagos Chamber of Commerce</title>
 
     <!-- font style -->
 
@@ -24,6 +26,12 @@
     <link rel="stylesheet" href="styles/directory-large.css">
 
 
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 
     <!-- JavaScript -->
     <script src="scripts/directory.js" defer></script>
@@ -33,7 +41,7 @@
     <header>
         <!-- Logo and Company Name -->
         <div class="logo">
-            <img src="images/chamber.png" alt="Company Logo">
+            <img src="images/chamber.jpg" alt="Company Logo">
             <span>Lagos Chamber of Commerce</span>
             <button id="ham-btn" class="hamburger"></button>
         </div>
@@ -42,9 +50,9 @@
         <div class="nav">
             <nav id="nav-bar" class="navigation">
                 <ul>
-                    <li><a href="">Home</a></li>
+                    <li><a href="#">Home</a></li>
                     <li class="current"><a href="directory.html">Directory</a></li>
-                    <li><a href="">Join</a></li>
+                    <li><a href="#">Join</a></li>
                     <li><a href="#">Discover</a></li>
                     <button class="theme-toggle" aria-label="Toggle dark mode"></button>
                 </ul>

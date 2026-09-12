@@ -17,7 +17,7 @@ const listBtn = document.querySelector("#listBtn");
 //Fetch and render once the page loads
 async function loadCompanies() {
   try {
-    const response = await fetch("data/member.json");
+    const response = await fetch("data/members.json");
     const companies = await response.json();
     displayCompanies(companies);
   } catch (error) {
