@@ -1,0 +1,51 @@
+@media screen and (min-width: 38rem) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  #directory.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #directory.list .company-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #directory.list .card-image {
+    width: 220px;
+    height: auto;
+    flex-shrink: 0;
+    margin: 1rem;
+    border-radius: 8px;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    width: auto;
+    order: 0;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+  .logo {
+    width: auto;
+  }
+  .hamburger {
+    display: none;
+  }
+  #nav-bar {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  #directory.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

@@ -1,0 +1,227 @@
+:root {
+  --bg-color: #ffffff;
+  --text-color: #1a1a1a;
+  --header-bg: #e0e0e0;
+  --card-bg: #f5f5f5;
+}
+* {
+  box-sizing: border-box;
+}
+
+/* HEADER */
+header,
+footer {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
+  gap: 1rem;
+}
+.hamburger {
+  background: transparent;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.hamburger::before {
+  content: "\2630";
+  font-size: 1.8rem;
+  color: #173f5f;
+}
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.logo img,
+footer img {
+  width: 40px;
+  height: 40px;
+}
+.nav {
+  width: 100%;
+  order: 3; /* forces nav below logo/toggle row */
+}
+
+#nav-bar {
+  display: none;
+}
+#nav-bar.show {
+  display: block;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  text-decoration: none;
+  color: var(--text-color);
+  cursor: pointer;
+}
+.navigation .current a {
+  text-decoration: underline;
+}
+.theme-toggle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid #1a1a1a;
+  background: linear-gradient(90deg, #1a1a1a 50%, transparent 50%);
+  cursor: pointer;
+}
+[data-theme="dark"] .theme-toggle {
+  border-color: #ffffff;
+  background: linear-gradient(90deg, #ffffff 50%, transparent 50%);
+}
+
+.social-media {
+  display: flex;
+  gap: 2.5rem;
+}
+
+#directory.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+.company-card {
+  background-color: var(--card-bg);
+  border: 1px solid #ccc;
+  padding: 1rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+}
+
+.card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.card-body h3 {
+  margin: 0;
+}
+.card-body .tagline {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  color: var(--text-color);
+}
+
+.detail a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--text-color);
+}
+.detail {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+/* List mode: image beside text, full width row */
+#directory.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 2rem;
+  background-color: var(--bg-color);
+}
+
+#directory.list .company-card {
+  flex-direction: column;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#directory.list .card-image {
+  width: 100%;
+  height: 180px;
+  border-radius: 8px;
+  margin: 0;
+}
+
+#directory.list .card-body {
+  flex: 1;
+  padding: 1.5rem 1.5rem 1.5rem 0;
+  justify-content: center;
+}
+
+#directory.list .card-body h3 {
+  font-size: 1.5rem;
+}
+
+#directory.list .detail {
+  font-size: 1rem;
+}
+
+#directory.list .badge {
+  margin-top: 1rem;
+}
+
+/* Active button state */
+.display-toggle {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 2rem 0;
+}
+
+.display-toggle button {
+  padding: 0.5rem 1rem;
+  border: 1px solid #999;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 4px;
+  cursor: pointer;
+}
+.display-toggle button.active {
+  background-color: var(--bg-color);
+  font-weight: bold;
+}
+
+[data-theme="dark"] {
+  --bg-color: #121212;
+  --text-color: #f0f0f0;
+  --header-bg: #1e1e1e;
+  --card-bg: #1e1e1e;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+}

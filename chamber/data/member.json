@@ -1,0 +1,83 @@
+[
+  {
+    "name": "Ardova Plc",
+    "tag": "Oil and Gas",
+    "address": "35, Ikeja Road, Lagos",
+    "email": "info@ardovaplc.com",
+    "url": "https://ardovaplc.com",
+    "image": "images/ardova.png",
+    "phone": "(234) 803 000 1111"
+  },
+  {
+    "name": "Dangote Cement",
+    "tag": "Manufacturing",
+    "address": "1, Alfred Rewane Road, Ikoyi, Lagos",
+    "email": "info@dangotecement.com",
+    "url": "https://www.dangotecement.com",
+    "image": "images/dangote.png",
+    "phone": "(234) 803 000 2222"
+  },
+  {
+    "name": "MTN Nigeria",
+    "tag": "Telecommunications",
+    "address": "Golden Plaza, Falomo, Ikoyi, Lagos",
+    "email": "customercare@mtn.com",
+    "url": "https://www.mtn.ng",
+    "image": "images/mtn.png",
+    "phone": "(234) 803 000 3333"
+  },
+  {
+    "name": "Guaranty Trust Bank",
+    "tag": "Banking and Finance",
+    "address": "635, Akin Adesola Street, Victoria Island, Lagos",
+    "email": "info@gtbank.com",
+    "url": "https://www.gtbank.com",
+    "image": "images/gtbank.png",
+    "phone": "(234) 803 000 4444"
+  },
+  {
+    "name": "Nestle Nigeria",
+    "tag": "Food and Beverage",
+    "address": "22/24, Industrial Avenue, Ilupeju, Lagos",
+    "email": "consumer.services@ng.nestle.com",
+    "url": "https://www.nestle-cwa.com",
+    "image": "images/nestle.png",
+    "phone": "(234) 803 000 5555"
+  },
+  {
+    "name": "Jumia Nigeria",
+    "tag": "E-commerce",
+    "address": "Plot 4, Providence Street, Lekki Phase 1, Lagos",
+    "email": "cs@jumia.com.ng",
+    "url": "https://www.jumia.com.ng",
+    "image": "images/jumia.png",
+    "phone": "(234) 803 000 6666"
+  },
+  {
+    "name": "Zenith Bank",
+    "tag": "Banking and Finance",
+    "address": "Plot 84, Ajose Adeogun Street, Victoria Island, Lagos",
+    "email": "zenithdirect@zenithbank.com",
+    "url": "https://www.zenithbank.com",
+    "image": "images/zenith.png",
+    "phone": "(234) 803 000 7777"
+  },
+  {
+    "name": "Airtel Nigeria",
+    "tag": "Telecommunications",
+    "address": "Airtel Networks Limited, Adeola Odeku Street, Victoria Island, Lagos",
+    "email": "customercare.ng@airtel.com",
+    "url": "https://www.airtel.com.ng",
+    "image": "images/airtel.png",
+    "phone": "(234) 803 000 8888"
+  },
+  {
+    "name": "Flour Mills of Nigeria",
+    "tag": "Manufacturing",
+    "address": "1, Golden Noodles Way, Apapa, Lagos",
+    "email": "info@fmnplc.com",
+    "url": "https://www.fmnplc.com",
+    "image": "images/flour-mill.png",
+    "phone": "(234) 803 000 9999"
+  }
+]
