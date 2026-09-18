@@ -19,12 +19,9 @@
     <meta property="og:url" content="https://adepegba1.github.io/wdd231/chamber/directory.html">
     <title>Directory of Lagos Chamber of Commerce</title>
 
-    <!-- font style -->
-
     <!-- Stylesheet -->
     <link rel="stylesheet" href="styles/directory.css">
     <link rel="stylesheet" href="styles/directory-large.css">
-
 
     <!-- Google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,10 +40,10 @@
         <div class="logo">
             <img src="images/chamber.jpg" alt="Company Logo">
             <span>Lagos Chamber of Commerce</span>
-            <button id="ham-btn" class="hamburger"></button>
+            <button id="ham-btn" class="hamburger" aria-label="hamburger"></button>
         </div>
 
-        <!-- Navigation -->
+        <!-- Navigation  Icon-->
         <div class="nav">
             <nav id="nav-bar" class="navigation">
                 <ul>
@@ -60,14 +57,20 @@
 
         </div>
     </header>
+
+    <!-- Main content -->
     <main>
-        <h1>Directory</h1>
-        <div class="display-toggle">
-            <button id="gridBtn" class="active">Grid</button>
-            <button id="listBtn">List</button>
+        <div class="heading">
+            <h1>Directory</h1>
+            <div class="display-toggle">
+                <button id="gridBtn" class="active" arial-label="Grid view">⊞</button>
+                <button id="listBtn" aria-label="List view">☰</button>
+            </div>
         </div>
         <div id="directory" class="grid"></div>
     </main>
+
+    <!-- footer -->
     <footer>
         <div class="company">
             <p><strong>Lagos Chamber of Commerce</strong></p>
@@ -89,7 +92,6 @@
             <p>Last Modification: <span id="lastModified"></span></p>
         </div>
     </footer>
-
 </body>
 
 </html>

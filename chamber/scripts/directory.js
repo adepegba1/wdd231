@@ -10,6 +10,7 @@ yearElement.textContent = currentYear;
 const modifiedElement = document.querySelector("#lastModified");
 modifiedElement.textContent = document.lastModified;
 
+// MAIN CONTENT
 const directory = document.querySelector("#directory");
 const gridBtn = document.querySelector("#gridBtn");
 const listBtn = document.querySelector("#listBtn");
@@ -65,6 +66,7 @@ listBtn.addEventListener("click", () => {
 
 loadCompanies();
 
+//THEME TOGGLE
 const themeToggle = document.querySelector(".theme-toggle");
 const root = document.documentElement;
 
@@ -87,6 +89,7 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
+// NAVIGATION BUTTON
 const navButton = document.querySelector("#ham-btn");
 const navlinks = document.querySelector("#nav-bar");
 

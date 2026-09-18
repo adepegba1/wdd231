@@ -1,23 +1,19 @@
 @media screen and (min-width: 38rem) {
+  /* HEADER  */
   header {
     flex-direction: row;
     justify-content: space-between;
   }
-  #directory.grid {
-    grid-template-columns: repeat(2, 1fr);
+
+  /* LOGO AND COMPANY NAME */
+  .logo {
+    width: auto;
   }
-  #directory.list .company-card {
-    flex-direction: row;
-    align-items: stretch;
-  }
-  #directory.list .card-image {
-    width: 220px;
-    height: auto;
-    flex-shrink: 0;
-    margin: 1rem;
-    border-radius: 8px;
+  .hamburger {
+    display: none;
   }
 
+  /* NAVIGATION ICON */
   .nav-toggle {
     display: none;
   }
@@ -33,14 +29,25 @@
     align-items: center;
     padding: 0;
   }
-  .logo {
-    width: auto;
-  }
-  .hamburger {
-    display: none;
-  }
+
   #nav-bar {
     display: block;
+  }
+  /* COMPANY CARD */
+  #directory.grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* LIST DISPLAY  */
+  #directory.list .company-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #directory.list .card-image {
+    width: 220px;
+    height: auto;
+    flex-shrink: 0;
+    margin: 1rem;
+    border-radius: 8px;
   }
 }
 
