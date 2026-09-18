@@ -99,8 +99,8 @@ footer img {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 2rem;
-  padding: 2rem;
-  background-color: var(--bg-color);
+  padding: 5px;
+  /* background-color: var(--bg-color); */
 }
 /* JAVASCRIPT FUNCTION CLASS */
 /* CARD  */
@@ -122,7 +122,6 @@ footer img {
 }
 
 .card-body {
-  padding: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
@@ -130,11 +129,13 @@ footer img {
 
 .card-body h3 {
   margin: 0;
+  padding-top: 1rem;
 }
 .card-body .tagline {
   margin: 0 0 0.5rem;
   font-size: 0.85rem;
   color: var(--text-color);
+  font-style: italic;
 }
 /* CARD A TAG LINK  */
 .detail a {
