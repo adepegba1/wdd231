@@ -9,8 +9,7 @@
 }
 
 /* HEADER  AND FOOTER*/
-header,
-footer {
+header {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -246,7 +245,17 @@ body {
 }
 
 /* FOOTER */
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+}
 .social-media {
   display: flex;
   gap: 2.5rem;
+}
+[data-theme="dark"] .social-media img {
+  filter: invert(1);
 }
