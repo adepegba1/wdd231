@@ -97,7 +97,7 @@ footer img {
 /* COMPANY CARD */
 #directory.grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem;
   background-color: var(--bg-color);
