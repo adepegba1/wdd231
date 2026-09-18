@@ -8,7 +8,7 @@
   box-sizing: border-box;
 }
 
-/* HEADER  AND FOOTER*/
+/* HEADER  */
 header {
   display: flex;
   flex-direction: column;
