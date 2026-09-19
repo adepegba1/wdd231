@@ -35,7 +35,7 @@
   }
   /* COMPANY CARD */
   #directory.grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
   }
   /* LIST DISPLAY  */
   #directory.list .company-card {
@@ -43,11 +43,18 @@
     align-items: stretch;
   }
   #directory.list .card-image {
-    width: 220px;
-    height: auto;
-    flex-shrink: 0;
-    margin: 1rem;
-    border-radius: 8px;
+    width: 140px;
+    height: 140px;
+  }
+
+  .card-body {
+    padding: 2rem 2rem 2rem 0rem;
+  }
+  .card-body h3 {
+    text-transform: uppercase;
+  }
+  .card-image {
+    width: 100%;
   }
   /* FOOTER  */
   footer {
@@ -57,6 +64,6 @@
 
 @media screen and (min-width: 64rem) {
   #directory.grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
   }
 }
