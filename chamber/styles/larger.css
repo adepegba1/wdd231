@@ -47,7 +47,7 @@
     height: 140px;
   }
 
-  .card-body {
+  #directory.list .card-body {
     padding: 2rem 2rem 2rem 0rem;
   }
   .card-body h3 {
