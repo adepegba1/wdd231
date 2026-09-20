@@ -1,0 +1,87 @@
+@media screen and (min-width: 38rem) {
+  /* HEADER  */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  /* LOGO AND COMPANY NAME */
+  .logo {
+    width: auto;
+  }
+  .hamburger {
+    display: none;
+  }
+
+  /* NAVIGATION ICON */
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav {
+    display: block;
+    width: auto;
+    order: 0;
+  }
+
+  .navigation ul {
+    flex-direction: row;
+    align-items: center;
+    padding: 0;
+  }
+
+  #nav-bar {
+    display: block;
+  }
+  /* COMPANY CARD */
+  #directory.grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  /* LIST DISPLAY  */
+  #directory.list .company-card {
+    flex-direction: row;
+    align-items: stretch;
+  }
+  #directory.list .card-image {
+    width: 140px;
+    height: 140px;
+  }
+
+  .card-body {
+    padding: 2rem 2rem 2rem 0rem;
+  }
+  .card-body h3 {
+    text-transform: uppercase;
+  }
+
+  /* FOOTER  */
+  footer {
+    flex-direction: row;
+  }
+
+  /* HOME PAGE — go from 1 column to multi-column layouts */
+  .hero-section {
+    height: 400px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+  .info-grid {
+    grid-template-columns: 2fr 1fr 1fr;
+  }
+  .spotlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 64rem) {
+  #directory.grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .spotlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
