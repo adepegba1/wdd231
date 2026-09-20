@@ -163,9 +163,6 @@ footer img {
   font-style: italic;
 }
 /* CARD A TAG LINK  */
-#directory.list .card-body {
-  min-width: 0;
-}
 .detail a {
   text-decoration: none;
   cursor: pointer;
@@ -212,6 +209,7 @@ footer img {
 
 #directory.list .card-body {
   padding: 1rem 1rem 1rem 0;
+  min-width: 0;
 }
 
 #directory.list .card-body h3 {
