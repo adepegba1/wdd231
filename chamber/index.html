@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Adepegba">
+    <meta name="description"
+        content="Official website of the Lagos Chamber of Commerce — discover upcoming events, check the local weather, and explore featured member businesses across Lagos, Nigeria.">
+
+    <!-- favicon -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <!-- Facebook meta -->
+
+    <meta property="og:title" content="Lagos Chamber of Commerce — Home">
+    <meta property="og:description"
+        content="Connect with the Lagos Chamber of Commerce. Explore upcoming events, current weather, and featured member businesses in Lagos, Nigeria.">
+    <meta property="og:image" content="https://adepegba1.github.io/wdd231/chamber/images/chamber.jpg">
+    <meta property="og:url" content="https://adepegba1.github.io/wdd231/chamber/index.html">
+    <title>Lagos Chamber of Commerce - Home</title>
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/larger.css">
+
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Valley+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- JavaScript -->
+    <script src="scripts/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <!-- Logo and Company Name -->
+        <div class="logo">
+            <img src="images/chamber.jpg" alt="Company Logo">
+            <span>Lagos Chamber of Commerce</span>
+            <button id="ham-btn" class="hamburger" aria-label="hamburger"></button>
+        </div>
+
+        <!-- Navigation  Icon-->
+        <div class="nav">
+            <nav id="nav-bar" class="navigation">
+                <ul>
+                    <li class="current"><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
+                    <li><button class="theme-toggle" aria-label="Toggle dark mode"></button></li>
+                </ul>
+            </nav>
+
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main>
+        <!-- HERO SECTION  -->
+        <section class="hero-section">
+            <img src="images/hero-image.avif" alt="hero-image" class="hero-image">
+            <div class="hero-overlay">
+                <div class="hero-content">
+                    <h1>Welcome to Lagos Chamber of Commerce</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Debitis error tempora assumenda optio
+                        repellat excepturi ex neque quibusdam sit, laboriosam dolores fugit nesciunt similique numquam
+                        dolorum? In molestiae blanditiis eum quod officiis magnam animi sunt dolorem, soluta explicabo
+                        sapiente iste cupiditate ea minima quo dolores. Necessitatibus hic labore illo quod.</p>
+                    <a href="#" class="cta-button">Join the Chamber</a>
+                </div>
+            </div>
+            <!-- EVENT SECTION  -->
+        </section>
+        <div class="home-container">
+            <div class="info-grid">
+                <section class="info-card events-card">
+                    <h2>Events</h2>
+                    <div class="events-list">
+                        <div class="event-item">
+                            <h3>Business Networking Mixer</h3>
+                            <p class="event-date">📅 October 15, 2026</p>
+                            <p class="event-time">⏰ 6:00 PM – 8:30 PM</p>
+                            <p class="event-location">📍 Lagos Chamber Hall, Segun Irefin Street</p>
+                        </div>
+
+                        <div class="event-item">
+                            <h3>Small Business Growth Workshop</h3>
+                            <p class="event-date">📅 October 22, 2026</p>
+                            <p class="event-time">⏰ 10:00 AM – 1:00 PM</p>
+                            <p class="event-location">📍 Chamber Conference Room, Victoria Island</p>
+                        </div>
+
+                        <div class="event-item">
+                            <h3>Annual Trade & Investment Summit</h3>
+                            <p class="event-date">📅 November 5, 2026</p>
+                            <p class="event-time">⏰ 9:00 AM – 4:00 PM</p>
+                            <p class="event-location">📍 Eko Convention Centre, Victoria Island</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEATHER SECTION  -->
+                <section class="info-card wearher-current-card">
+                    <h2>Current Weather</h2>
+                    <div class="current-weather-content">
+                        <div class="weather-main-display">
+                            <div class="weather-icon-wrapper">
+                                <img id="weatherIcon" src="images/weather-icon.png" alt="weather icon"
+                                    class="weather-icon-large">
+                            </div>
+                            <div class="weather-info">
+                                <div class="temperature-large" id="currentTemp">--°F</div>
+                                <p class="weather-description-main" id="weatherDescription">Loading...</p>
+                            </div>
+                        </div>
+                        <div class="weather-details-list">
+                            <p><strong>High:</strong><span id="highTemp">--°F</span></p>
+
+                            <p><strong>Low:</strong><span id="lowTemp">--°F</span></p>
+                            <p><strong>Humidity:</strong><span id="humidity">--°F</span></p>
+                            <p><strong>Sunrise:</strong><span id="sunrise">--°F</span></p>
+                            <p><strong>Sunset:</strong><span id="sunset">--°F</span></p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- WEATHER FORECAST SECTION  -->
+                <section class="info-card weather-forecast-card">
+                    <h2>Weather Forecast</h2>
+                    <div class="forecast-list" id="forecastList"></div>
+                </section>
+            </div>
+            <!-- MEMBER SPOTLIGHT SECTION  -->
+            <section class="spotlights-section">
+                <h2 class="spotlights-title">Featured Members</h2>
+                <div class="spotlights-grid" id="spotlightsGrid"></div>
+            </section>
+
+        </div>
+
+    </main>
+
+    <!-- footer -->
+    <footer>
+        <div class="company">
+            <p><strong>Lagos Chamber of Commerce</strong></p>
+            <p>13/15 Segun Irefin Street</p>
+            <p>Lagos, Nigeria</p>
+            <p>info@lagoscc.org</p>
+            <p>(234) 813 792 4205</p>
+        </div>
+        <div class="social-media">
+            <a href="https://youtube.com"><img src="images/youtube.svg" alt="Youtube Logo"></a>
+            <a href="https://www.linkedin.com/in/adepegbadavid1/"><img src="images/linkedin.svg"
+                    alt="LinkedIn Logo"></a>
+            <a href="https://x.com/adepegbadavid1"><img src="images/twitter.svg" alt="Twitter Logo"></a>
+        </div>
+        <div class="student">
+            <p><strong>WDD231 Project</strong></p>
+            <p>David Adepegba</p>
+            <p>&copy; <span id="currentyear"></span> Lagos Chamber of Commerce</p>
+            <p>Last Modification: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
