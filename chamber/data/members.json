@@ -6,7 +6,8 @@
     "email": "info@ardovaplc.com",
     "url": "https://ardovaplc.com",
     "image": "images/ardova.png",
-    "phone": "(234) 803 000 1111"
+    "phone": "(234) 803 000 1111",
+    "membership": "silver"
   },
   {
     "name": "Dangote Cement",
@@ -15,7 +16,8 @@
     "email": "info@dangotecement.com",
     "url": "https://www.dangotecement.com",
     "image": "images/dangote.png",
-    "phone": "(234) 803 000 2222"
+    "phone": "(234) 803 000 2222",
+    "membership": "gold"
   },
   {
     "name": "MTN Nigeria",
@@ -24,7 +26,8 @@
     "email": "customercare@mtn.com",
     "url": "https://www.mtn.ng",
     "image": "images/mtn.png",
-    "phone": "(234) 803 000 3333"
+    "phone": "(234) 803 000 3333",
+    "membership": "silver"
   },
   {
     "name": "Guaranty Trust Bank",
@@ -33,7 +36,8 @@
     "email": "info@gtbank.com",
     "url": "https://www.gtbank.com",
     "image": "images/gtbank.png",
-    "phone": "(234) 803 000 4444"
+    "phone": "(234) 803 000 4444",
+    "membership": "bronze"
   },
   {
     "name": "Nestle Nigeria",
@@ -42,7 +46,8 @@
     "email": "consumer.services@ng.nestle.com",
     "url": "https://www.nestle-cwa.com",
     "image": "images/nestle.png",
-    "phone": "(234) 803 000 5555"
+    "phone": "(234) 803 000 5555",
+    "membership": "gold"
   },
   {
     "name": "Jumia Nigeria",
@@ -51,7 +56,8 @@
     "email": "cs@jumia.com.ng",
     "url": "https://www.jumia.com.ng",
     "image": "images/jumia.png",
-    "phone": "(234) 803 000 6666"
+    "phone": "(234) 803 000 6666",
+    "membership": "bronze"
   },
   {
     "name": "Zenith Bank",
@@ -60,7 +66,8 @@
     "email": "zenithdirect@zenithbank.com",
     "url": "https://www.zenithbank.com",
     "image": "images/zenith.png",
-    "phone": "(234) 803 000 7777"
+    "phone": "(234) 803 000 7777",
+    "membership": "gold"
   },
   {
     "name": "Airtel Nigeria",
@@ -69,7 +76,8 @@
     "email": "customercare.ng@airtel.com",
     "url": "https://www.airtel.com.ng",
     "image": "images/airtel.png",
-    "phone": "(234) 803 000 8888"
+    "phone": "(234) 803 000 8888",
+    "membership": "silver"
   },
   {
     "name": "Flour Mills of Nigeria",
@@ -78,6 +86,7 @@
     "email": "info@fmnplc.com",
     "url": "https://www.fmnplc.com",
     "image": "images/flour-mill.png",
-    "phone": "(234) 803 000 9999"
+    "phone": "(234) 803 000 9999",
+    "membership": "gold"
   }
 ]
