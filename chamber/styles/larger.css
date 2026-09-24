@@ -65,9 +65,11 @@
   }
   .hero-content h1 {
     font-size: 2.5rem;
+    margin-bottom: 1rem;
   }
   .hero-content p {
     font-size: 1.2rem;
+    margin-bottom: 1rem;
   }
   .info-grid {
     grid-template-columns: 2fr 1fr 1fr;

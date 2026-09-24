@@ -349,14 +349,14 @@ footer {
   padding: 0 1.5rem;
 }
 .hero-content h1 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   margin-bottom: 0.5rem;
   font-weight: 700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   color: white;
 }
 .hero-content p {
-  font-size: 0.9rem;
+  font-size: 0.7rem;
   margin-bottom: 0.3rem;
   max-width: 600px;
   line-height: 1.2;
