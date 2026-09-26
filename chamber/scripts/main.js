@@ -316,3 +316,119 @@ if (document.getElementById("weatherIcon")) {
 if (document.getElementById("spotlightsGrid")) {
   loadSpotlights();
 }
+
+// ===================================
+// W04 JOIN PAGE FUNCTIONALITY
+// ===================================
+
+/**
+ * Sets the current date and time in the hidden timestamp field on join.html.
+ */
+function setFormTimestamp() {
+  // Only run if the timestamp field element exists
+  const timestampField = document.getElementById("timestamp");
+  if (timestampField) {
+    const now = new Date();
+    // Use ISO String for precise, standardized date/time submission
+    timestampField.value = now.toISOString();
+  }
+}
+
+/**
+ * Displays submitted form data on the thankyou.html page.
+ */
+function displayThankYouData() {
+  const displaySection = document.getElementById("form-data-display");
+
+  // Only run if we are on the thankyou page
+  if (!displaySection) return;
+
+  const params = new URLSearchParams(window.location.search);
+
+  // Define the required fields to display (must match 'name' attributes in join.html form)
+  const fieldsToDisplay = {
+    fname: "First Name",
+    lname: "Last Name",
+    email: "Email Address",
+    phone: "Mobile Number",
+    orgname: "Business Name",
+    timestamp: "Application Time",
+  };
+
+  let htmlContent = "<ul>";
+
+  for (const [paramName, friendlyName] of Object.entries(fieldsToDisplay)) {
+    const value = params.get(paramName);
+    if (value) {
+      let displayValue = value;
+
+      // Format the timestamp for better readability
+      if (paramName === "timestamp") {
+        try {
+          const date = new Date(value);
+          displayValue =
+            date.toLocaleDateString("en-US") +
+            " at " +
+            date.toLocaleTimeString("en-US");
+        } catch (e) {
+          // Fallback to raw value
+        }
+      }
+
+      htmlContent += `<li><strong>${friendlyName}:</strong> ${displayValue}</li>`;
+    }
+  }
+
+  htmlContent += "</ul>";
+
+  // Append content, preserving any initial message in the div
+  displaySection.innerHTML += htmlContent;
+}
+
+/**
+ * Setup modal dialogs (W04 Requirement: Use HTML5 dialog element)
+ */
+function setupModals() {
+  const modalButtons = document.querySelectorAll(".modal-link[data-modal]");
+
+  modalButtons.forEach((button) => {
+    const modalId = button.getAttribute("data-modal");
+    const modal = document.getElementById(modalId);
+    if (!modal) return;
+
+    button.addEventListener("click", () => modal.showModal());
+
+    const closeButton = modal.querySelector(".close-modal");
+    if (closeButton) {
+      closeButton.addEventListener("click", () => modal.close());
+    }
+
+    modal.addEventListener("click", (e) => {
+      const dialogDimensions = modal.getBoundingClientRect();
+      if (
+        e.clientX < dialogDimensions.left ||
+        e.clientX > dialogDimensions.right ||
+        e.clientY < dialogDimensions.top ||
+        e.clientY > dialogDimensions.bottom
+      ) {
+        modal.close();
+      }
+    });
+  });
+}
+
+// ===================================
+// RUN JOIN / THANK YOU PAGE LOGIC
+// ===================================
+setupModals();
+
+// Set the timestamp right when the form is submitted, not on page load,
+// so it reflects the actual submission time
+const membershipForm = document.querySelector(".membership-form");
+if (membershipForm) {
+  membershipForm.addEventListener("submit", () => {
+    setFormTimestamp();
+  });
+}
+
+displayThankYouData(); // safe no-op on pages without #form-data-display
