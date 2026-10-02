@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Site plan for DataFolio - A professional portfolio website for a Data Analyst.">
+    <meta name="author" content="David Adepegba">
+
+    <meta property="og:title" content="DataFolio - Site Plan">
+    <meta property="og:description"
+        content="Planning document for the DataFolio data analyst portfolio website project.">
+    <meta property="og:type" content="website">
+
+    <title>DataFolio - Site Plan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Inter:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/siteplan.css">
+</head>
+
+<body>
+    <header>
+        <img src="images/datafolio-logo.webp" alt="DataFolio Logo" class="site-logo">
+        <div>
+            <h1>DataFolio</h1>
+            <p>Data Analyst Portfolio - Site Plan</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <h2>1. Site Name</h2>
+            <p><strong>DataFolio</strong></p>
+            <p>The name "DataFolio" combines "Data" and "Portfolio" into a short, memorable brand that immediately
+                signals what the site is for: a professional showcase of data analysis work. It sounds modern and
+                technical while staying easy to say and remember — a good fit for a personal brand in the analytics
+                field.</p>
+            <p><strong>Optional domain:</strong> datafolio.dev or yournamedata.com</p>
+
+            <h3>Why I Chose This Subject</h3>
+            <p>I chose a data analyst portfolio because it's directly relevant to my career goals — I need a
+                professional, centralized place to showcase my skills, past projects, and services to potential
+                employers and clients. Building this site lets me demonstrate real technical ability (data
+                visualization, dashboards, reporting) alongside the JavaScript and web development skills required for
+                this project.</p>
+        </section>
+
+        <section class="section">
+            <h2>2. Site Purpose</h2>
+            <p>DataFolio is a professional portfolio website showcasing data analysis skills, past projects, and
+                available services to recruiters, hiring managers, and freelance clients. The site provides:</p>
+            <ul>
+                <li><strong>Home Page (index.html):</strong> Hero section with name, title, and tagline, a brief "About
+                    Me" summary, and a snapshot grid of core skills (SQL, Python, Excel, Power BI/Tableau, statistics,
+                    data storytelling)</li>
+                <li><strong>Portfolio Page (portfolio.html):</strong> Displays all past data analysis projects
+                    dynamically loaded from a JSON data source, each with a title, description, tools used, key insight,
+                    and a link to the full project. Includes category filtering (visualization, data cleaning,
+                    analytics) using JavaScript</li>
+                <li><strong>Contact/Services Page (contact.html):</strong> Lists services offered (data cleaning,
+                    dashboard creation, reporting, predictive analysis), a contact form, email, LinkedIn link, and a
+                    downloadable resume</li>
+            </ul>
+
+            <h3>Dynamic Features</h3>
+            <p>The site demonstrates JavaScript proficiency through:</p>
+            <ul>
+                <li>Data fetching from a JSON file using the Fetch API with try/catch error handling</li>
+                <li>Dynamic content generation displaying each project with 4+ properties (title, description, tools,
+                    link)</li>
+                <li>Category filter buttons that re-render the project grid without reloading the page</li>
+                <li>A dark/light mode toggle stored in a data attribute for accessibility and modern UX</li>
+                <li>DOM manipulation and event handling (clicks, filters, form submission)</li>
+                <li>Array methods (filter, map, forEach) for processing project data</li>
+                <li>Template literals for dynamic HTML generation</li>
+                <li>Responsive hamburger navigation for mobile screens</li>
+            </ul>
+        </section>
+
+        <section class="section">
+            <h2>3. Target Audience Scenarios</h2>
+
+            <div class="scenario">
+                <strong>Scenario 1:</strong>
+                <p>"I'm a hiring manager and want to see real examples of this person's data analysis work before
+                    scheduling an interview."</p>
+                <p><em>Answer:</em> Browse the Portfolio page where every project is displayed with a short description,
+                    the tools used, and the key insight or result. Filter by project type (visualization, data cleaning,
+                    analytics) to quickly find relevant examples.</p>
+            </div>
+
+            <div class="scenario">
+                <strong>Scenario 2:</strong>
+                <p>"I want to quickly understand this analyst's core skill set and experience level without reading a
+                    full resume."</p>
+                <p><em>Answer:</em> The Home page's About Me section and skills grid summarize experience and tools at a
+                    glance, with a clear hero section stating title and specialty right at the top of the page.</p>
+            </div>
+
+            <div class="scenario">
+                <strong>Scenario 3:</strong>
+                <p>"I'd like to hire this analyst for a short freelance project and need to know what services they
+                    offer and how to reach them."</p>
+                <p><em>Answer:</em> Visit the Contact/Services page to see a list of offered services, then use the
+                    contact form or direct email/LinkedIn links to get in touch. A downloadable resume is also available
+                    there.</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>4. Color Schema</h2>
+            <p>The color palette uses clean, professional tones associated with trust and technical credibility, while
+                keeping strong contrast for readability and accessibility in both light and dark mode.</p>
+
+            <div class="colors">
+                <div class="color-box">
+                    <div class="color-swatch color-navy"></div>
+                    <p class="color-name"><strong>Deep Navy</strong></p>
+                    <p>#173F5F</p>
+                    <p>Headings, navigation, primary buttons</p>
+                </div>
+
+                <div class="color-box">
+                    <div class="color-swatch color-teal"></div>
+                    <p class="color-name"><strong>Teal</strong></p>
+                    <p>#2A9D8F</p>
+                    <p>Links, hover states, highlights</p>
+                </div>
+
+                <div class="color-box">
+                    <div class="color-swatch color-slate"></div>
+                    <p class="color-name"><strong>Slate Gray</strong></p>
+                    <p>#4A5568</p>
+                    <p>Body text, secondary text</p>
+                </div>
+
+                <div class="color-box">
+                    <div class="color-swatch color-cloud"></div>
+                    <p class="color-name"><strong>Cloud White</strong></p>
+                    <p>#F4F6F8</p>
+                    <p>Page background, cards</p>
+                </div>
+
+                <div class="color-box">
+                    <div class="color-swatch color-gold"></div>
+                    <p class="color-name"><strong>Gold</strong></p>
+                    <p>#F5C518</p>
+                    <p>Badges, accents, call-outs</p>
+                </div>
+
+                <div class="color-box">
+                    <div class="color-swatch color-white"></div>
+                    <p class="color-name"><strong>White</strong></p>
+                    <p>#FFFFFF</p>
+                    <p>Card backgrounds, button text</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>5. Typography</h2>
+            <p>The typography pairs a clean, geometric heading font with a highly readable body font, keeping the site
+                looking modern and technical without sacrificing legibility.</p>
+
+            <div class="font-example">
+                <p class="font-heading">Poppins</p>
+                <p class="font-body"><strong>Font Family:</strong> 'Poppins', sans-serif</p>
+                <p class="font-body"><strong>Weights:</strong> 400, 600, 700</p>
+                <p class="font-body"><strong>Use:</strong> All headings (H1, H2, H3), logo text, hero tagline</p>
+            </div>
+
+            <div class="font-example">
+                <p class="font-body" style="font-size: 1.3rem; font-weight: 600;">Inter</p>
+                <p class="font-body"><strong>Font Family:</strong> 'Inter', sans-serif</p>
+                <p class="font-body"><strong>Weights:</strong> 400, 500, 600</p>
+                <p class="font-body"><strong>Use:</strong> Body text, navigation links, project descriptions, form
+                    fields</p>
+            </div>
+        </section>
+
+        <section class="section">
+            <h2>6. Wireframes</h2>
+            <p>The wireframes demonstrate the layout structure for the home page on both mobile and desktop viewports.
+            </p>
+
+            <div class="wireframe-section">
+                <div class="wireframe-box">
+                    <h3>Mobile View (320px - 767px)</h3>
+                    <img src="images/mobile-wireframe.webp" alt="Mobile wireframe" class="wireframe-image">
+                    <p class="wireframe-caption">Hamburger nav, stacked hero, single-column skills and project cards,
+                        footer</p>
+                </div>
+
+                <div class="wireframe-box">
+                    <h3>Desktop View (768px+)</h3>
+                    <img src="images/desktop-wireframe.webp" alt="Desktop wireframe" class="wireframe-image">
+                    <p class="wireframe-caption">Horizontal nav, hero banner, 3-column skills/project grid, footer</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 DataFolio. All rights reserved.</p>
+        <p>Contact: your.email@example.com | LinkedIn: linkedin.com/in/yourname</p>
+    </footer>
+</body>
+
+</html>
