@@ -938,3 +938,175 @@ input:required:valid {
 .back-to-home-btn {
   margin-top: 1.5rem;
 }
+
+/* DISCOVER SECTION  */
+.discover-hero {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.discover-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.discover-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 51, 102, 0.6) 0%,
+    rgba(0, 51, 102, 0.8) 100%
+  );
+}
+.discover-hero-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  z-index: 2;
+}
+.discover-hero-content h2 {
+  font-size: 3.5rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  color: var(--accent-color);
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.discover-hero-content p {
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.8;
+  color: var(--accent-color);
+  font-weight: 500;
+}
+
+.home-container {
+}
+.visit-message-container {
+  color: var(--accent-color);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.attractions-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.attraction-card {
+  background-color: var(--primary-color);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  display: grid;
+  grid-template-areas: "title" "images" "address" "description" "button";
+}
+
+.attraction-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.attraction-card h2 {
+  grid-area: title;
+  font-size: 1.3rem;
+  color: var(--danger-color);
+  padding: 1.5rem 1.5rem 0.5rem;
+  margin: 0;
+}
+.attraction-card figure {
+  grid-area: image;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.attraction-card figure img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+.attraction-card address {
+  grid-area: address;
+  font-style: normal;
+  padding: 1rem 1.5rem 0.5rem;
+  color: var(--color-dark-gray);
+  font-size: 0.9rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.attraction-card address::before {
+  content: "📍";
+}
+
+.attraction-card p {
+  grid-area: description;
+  padding: 0 1.5rem 1rem;
+  color: var(--color-dark-text);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.attraction-card button {
+  grid-area: button;
+  margin: 0 1.5rem 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background-color: var(--color-primary-dark);
+  color: var(--color-light-text);
+  border: 2px solid var(--color-nav-hover);
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.attraction-card button:hover {
+  background-color: var(--color-nav-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 77, 153, 0.3);
+}
