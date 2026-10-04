@@ -971,7 +971,7 @@ input:required:valid {
   text-align: center;
   z-index: 2;
 }
-.discover-hero-content h2 {
+.discover-hero-content h1 {
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
