@@ -975,7 +975,7 @@ input:required:valid {
   font-size: 1.6rem;
   margin-bottom: 0.75rem;
   font-weight: 700;
-  color: var(--accent-color);
+  color: var(--nav-text);
   letter-spacing: 1px;
   text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
 }
@@ -985,13 +985,13 @@ input:required:valid {
   max-width: 800px;
   margin: 0 auto;
   line-height: 1.6;
-  color: var(--accent-color);
+  color: var(--nav-text);
   font-weight: 500;
 }
 
 .visit-message-container {
-  background-color: var(--highlight-bg);
-  color: var(--accent-color);
+  background-color: var(--accent-color);
+  color: var(--nav-text);
   padding: 1.5rem;
   border-radius: 10px;
   margin-bottom: 2rem;
