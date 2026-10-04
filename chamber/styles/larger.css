@@ -60,23 +60,26 @@
   }
 
   /* HOME PAGE — go from 1 column to multi-column layouts */
-  .hero-section {
-    height: 400px;
+  .hero-section,
+  .discover-hero {
+    height: 450px;
   }
-  .hero-content h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+  .hero-content h1,
+  .discover-hero-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
   }
-  .hero-content p {
-    font-size: 1.2rem;
+  .hero-content p,
+  .discover-hero-content p {
+    font-size: 1.4rem;
     margin-bottom: 1rem;
+    line-height: 1.8;
   }
   .info-grid {
     grid-template-columns: 2fr 1fr 1fr;
   }
-  .spotlights-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  .spotlights-grid,
+  .attractions-grid,
   .fieldset-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -91,7 +94,8 @@
   #directory.grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  .spotlights-grid {
+  .spotlights-grid,
+  .attractions-grid {
     grid-template-columns: repeat(3, 1fr);
   }
   .join-page-layout {

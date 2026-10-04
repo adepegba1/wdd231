@@ -1,0 +1,65 @@
+[
+  {
+    "id": 1,
+    "name": "Dangote Group",
+    "address": "Union Marble House, 1 Alfred Rewane Road, Falomo, Ikoyi, Lagos",
+    "description": "A diversified industrial conglomerate with interests in cement, sugar, salt, and flour production, and a leading member of the Lagos Chamber of Commerce and Industry.",
+    "image": "images/dangote.png"
+  },
+  {
+    "id": 2,
+    "name": "MTN Nigeria",
+    "address": "Golden Plaza, Falomo, Ikoyi, Lagos",
+    "description": "A leading telecommunications provider offering mobile voice, data, and digital services across Nigeria, supporting local businesses through connectivity solutions.",
+    "image": "images/mtn.png"
+  },
+  {
+    "id": 3,
+    "name": "Guaranty Trust Bank (GTBank)",
+    "address": "635, Akin Adesola Street, Victoria Island, Lagos",
+    "description": "A top-tier Nigerian financial institution providing retail and corporate banking services, and an active participant in chamber-sponsored business development programs.",
+    "image": "images/gtbank.png"
+  },
+  {
+    "id": 4,
+    "name": "Nestle Nigeria Plc",
+    "address": "22/24 Industrial Avenue, Ilupeju, Lagos",
+    "description": "A leading food and beverage manufacturing company producing nutrition, health, and wellness products for the Nigerian market.",
+    "image": "images/nestle.png"
+  },
+  {
+    "id": 5,
+    "name": "Zenith Bank Plc",
+    "address": "Plot 84, Ajose Adeogun Street, Victoria Island, Lagos",
+    "description": "A major commercial bank offering corporate, investment, and retail banking services, recognized for its contributions to trade finance in Nigeria.",
+    "image": "images/zenith.png"
+  },
+  {
+    "id": 6,
+    "name": "Flour Mills of Nigeria",
+    "address": "1 Golden Noodles Way, Apapa, Lagos",
+    "description": "One of Nigeria's largest food processing companies, producing flour, pasta, and other packaged food products for local and export markets.",
+    "image": "images/flour-mill.png"
+  },
+  {
+    "id": 7,
+    "name": "Airtel Nigeria",
+    "address": "Airtel Networks Limited, Adeola Odeku Street, Victoria Island, Lagos",
+    "description": "A major telecommunications operator providing mobile network, data, and digital financial services across Nigeria.",
+    "image": "images/airtel.png"
+  },
+  {
+    "id": 8,
+    "name": "Jumia Nigeria",
+    "address": "Plot 4, Providence Street, Lekki Phase 1, Lagos",
+    "description": "Nigeria's leading e-commerce platform connecting small and medium businesses to customers through online retail and logistics services.",
+    "image": "images/jumia.png"
+  },
+  {
+    "id": 9,
+    "name": "Ardova Plc",
+    "address": "35, Hospital Road, Apapa, Lagos",
+    "description": "An integrated energy company engaged in the marketing and distribution of petroleum products across Nigeria.",
+    "image": "images/ardova.png"
+  }
+]

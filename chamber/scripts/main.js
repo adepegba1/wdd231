@@ -10,6 +10,21 @@ yearElement.textContent = currentYear;
 const modifiedElement = document.querySelector("#lastModified");
 modifiedElement.textContent = document.lastModified;
 
+// ============================================================
+// UTILITY — escape user-supplied text before inserting as HTML.
+// Prevents special characters (<, >, &, quotes) from breaking
+// the markup or allowing injected tags.
+// ============================================================
+function escapeHtml(str) {
+  if (!str) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
 // MAIN CONTENT
 const directory = document.querySelector("#directory");
 const gridBtn = document.querySelector("#gridBtn");
@@ -36,6 +51,10 @@ if (directory && gridBtn && listBtn) {
     companies.forEach((company) => {
       const card = document.createElement("div");
       card.classList.add("company-card");
+
+      // Fall back to "member" if membership level is missing, so
+      // .toUpperCase() never throws on an undefined value.
+      const level = company.membership || "member";
 
       card.innerHTML = `
       <img src="${company.image}" alt="${company.name} logo" class="card-image">
@@ -71,7 +90,10 @@ if (directory && gridBtn && listBtn) {
   loadCompanies();
 }
 
-//THEME TOGGLE — always starts in light mode on every page load
+// ============================================================
+// THEME TOGGLE — always starts in light mode on every page load
+// (no saved preference is restored from localStorage, by design).
+// ============================================================
 const themeToggle = document.querySelector(".theme-toggle");
 const root = document.documentElement;
 
@@ -87,7 +109,9 @@ themeToggle.addEventListener("click", () => {
   }
 });
 
-// NAVIGATION BUTTON
+// ============================================================
+// HAMBURGER NAVIGATION — toggles the mobile nav menu open/closed.
+// ============================================================
 const navButton = document.querySelector("#ham-btn");
 const navlinks = document.querySelector("#nav-bar");
 
@@ -96,21 +120,9 @@ navButton.addEventListener("click", () => {
   navlinks.classList.toggle("show");
 });
 
-// ============================
-// UTILITY — escape user-supplied text before inserting as HTML
-// ============================
-function escapeHtml(str) {
-  if (!str) return "";
-  return str
-    .replace(/&/g, "&amp;")
-    .replace(/</g, "&lt;")
-    .replace(/>/g, "&gt;")
-    .replace(/"/g, "&quot;")
-    .replace(/'/g, "&#039;");
-}
-
-// WEATHER SECTION
-
+// ============================================================
+// HOME PAGE — CURRENT WEATHER
+// ============================================================
 const lat = 6.61; // Lagos, Nigeria latitude
 const lon = 3.35; // lagos, Nigeria longitude
 const API_KEY = "385fcdaf0c3aecef6cce40d5fbd00265";
@@ -178,9 +190,9 @@ function displayCurrentWeather(data) {
   }
 }
 
-// ============================
-// HOME PAGE - WEATHER FORECAST
-// ============================
+// ============================================================
+// HOME PAGE — 3-DAY WEATHER FORECAST
+// ============================================================
 async function fetchWeatherForecast() {
   try {
     const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&units=imperial&appid=${API_KEY}`;
@@ -317,9 +329,10 @@ if (document.getElementById("spotlightsGrid")) {
   loadSpotlights();
 }
 
-// ===================================
-// W04 JOIN PAGE FUNCTIONALITY
-// ===================================
+// ============================================================
+// JOIN PAGE — stamps the hidden #timestamp field right at submit
+// time (not page load), so it reflects when the form was actually sent.
+// ============================================================
 
 /**
  * Sets the current date and time in the hidden timestamp field on join.html.
@@ -328,9 +341,8 @@ function setFormTimestamp() {
   // Only run if the timestamp field element exists
   const timestampField = document.getElementById("timestamp");
   if (timestampField) {
-    const now = new Date();
     // Use ISO String for precise, standardized date/time submission
-    timestampField.value = now.toISOString();
+    timestampField.value = new Date().toISOString();
   }
 }
 
@@ -385,9 +397,10 @@ function displayThankYouData() {
   displaySection.innerHTML += htmlContent;
 }
 
-/**
- * Setup modal dialogs (W04 Requirement: Use HTML5 dialog element)
- */
+// ============================================================
+// JOIN PAGE — modal dialogs for membership benefit details.
+// Uses the native <dialog> element's showModal()/close() methods.
+// ============================================================
 function setupModals() {
   const modalButtons = document.querySelectorAll(".modal-link[data-modal]");
 
@@ -432,3 +445,113 @@ if (membershipForm) {
 }
 
 displayThankYouData(); // safe no-op on pages without #form-data-display
+
+// ============================================================
+// DISCOVER PAGE — attractions grid
+// ============================================================
+async function loadAttractions() {
+  const attractionsGrid = document.getElementById("attractionsGrid");
+  if (!attractionsGrid) return; // not on this page
+
+  try {
+    // Fetch attractions data
+    const response = await fetch("data/attractions.json");
+    if (!response.ok) throw new Error("Network response was not ok");
+
+    const attractions = await response.json();
+    displayAttractions(attractions, attractionsGrid);
+  } catch (error) {
+    console.error("Error loading attractions:", error);
+    attractionsGrid.innerHTML =
+      "<p>Error loading attractions. Please try again later.</p>";
+  }
+}
+
+/**
+ * Display attractions in grid
+ */
+function displayAttractions(attractions, container) {
+  container.innerHTML = "";
+
+  attractions.forEach((attraction) => {
+    const card = document.createElement("div");
+    card.className = "attraction-card";
+
+    card.innerHTML = `
+            <h2>${escapeHtml(attraction.name)}</h2>
+            <figure>
+                <img src="${attraction.image}" 
+                     alt="${escapeHtml(attraction.name)}" 
+                     loading="lazy"
+                     width="300" 
+                     height="200">
+            </figure>
+            <address>${escapeHtml(attraction.address)}</address>
+            <p>${escapeHtml(attraction.description)}</p>
+            <button type="button" onclick="window.open('https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(attraction.address)}', '_blank')">
+                Learn More
+            </button>
+        `;
+
+    container.appendChild(card);
+  });
+}
+
+// ============================================================
+// DISCOVER PAGE — "last visited" message using localStorage.
+// ============================================================
+function displayVisitMessage() {
+  const visitMessageContainer = document.getElementById("visitMessage");
+  if (!visitMessageContainer) return; // not on this page
+
+  const now = Date.now();
+  const lastVisit = localStorage.getItem("lastVisitDiscover");
+
+  let message = "";
+
+  if (!lastVisit) {
+    // First visit
+    message = "🎉 Welcome! Let us know if you have any questions.";
+  } else {
+    const lastVisitTime = parseInt(lastVisit);
+    const timeDiff = now - lastVisitTime;
+    const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+
+    if (daysDiff < 1) {
+      // Less than a day
+      message = "👋 Back so soon! Awesome!";
+    } else if (daysDiff === 1) {
+      // Exactly 1 day
+      message = `📅 You last visited 1 day ago.`;
+    } else {
+      // More than 1 day
+      message = `📅 You last visited ${daysDiff} days ago.`;
+    }
+  }
+
+  // Store current visit
+  localStorage.setItem("lastVisitDiscover", now.toString());
+
+  // Display message
+  visitMessageContainer.textContent = message;
+}
+
+// ============================================================
+// SINGLE INITIALIZATION ENTRY POINT
+// Each init function internally checks whether its elements exist,
+// so it's safe to call all of them on every page — only the
+// relevant ones actually do anything on a given page.
+// ============================================================
+document.addEventListener("DOMContentLoaded", () => {
+  // Discover page widgets
+  if (document.getElementById("attractionsGrid")) {
+    displayVisitMessage();
+    loadAttractions();
+  }
+
+  // Mark lazy-loaded images once they've actually loaded (useful if you
+  // want to fade them in via a [data-loaded="true"] CSS selector)
+  document.querySelectorAll('img[loading="lazy"]').forEach((img) => {
+    img.addEventListener("load", () => img.setAttribute("data-loaded", "true"));
+  });
+});

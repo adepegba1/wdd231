@@ -122,6 +122,7 @@ footer img {
   padding: 5px;
   /* background-color: var(--bg-color); */
 }
+
 /* JAVASCRIPT FUNCTION CLASS */
 /* CARD  */
 .company-card {
@@ -162,6 +163,7 @@ footer img {
   color: var(--text-color);
   font-style: italic;
 }
+
 /* CARD A TAG LINK  */
 .detail a {
   text-decoration: none;
@@ -307,6 +309,8 @@ footer {
   justify-content: space-between;
   align-items: center;
   gap: 1.5rem;
+  background-color: var(--header-bg);
+  padding: 1rem 2rem;
 }
 .social-media {
   display: flex;
@@ -765,8 +769,6 @@ input:required:valid {
   animation: fadeInSlideUp 1s ease-out forwards;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-.membership-card:hover {
-}
 
 .membership-card h3 {
   font-size: 1.1rem;
@@ -807,14 +809,6 @@ input:required:valid {
     opacity: 1;
     transform: translateY(0);
   }
-}
-.np-card {
-}
-.bronze-card {
-}
-.silver-card {
-}
-.gold-card {
 }
 
 /* DIALOG SECTION  */
@@ -943,7 +937,7 @@ input:required:valid {
 .discover-hero {
   position: relative;
   width: 100%;
-  height: 450px;
+  height: 250px;
   overflow: hidden;
   margin-bottom: 0;
 }
@@ -978,8 +972,8 @@ input:required:valid {
   z-index: 2;
 }
 .discover-hero-content h2 {
-  font-size: 3.5rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
   font-weight: 700;
   color: var(--accent-color);
   letter-spacing: 1px;
@@ -987,17 +981,16 @@ input:required:valid {
 }
 
 .discover-hero-content p {
-  font-size: 1.4rem;
+  font-size: 0.95rem;
   max-width: 800px;
   margin: 0 auto;
-  line-height: 1.8;
+  line-height: 1.6;
   color: var(--accent-color);
   font-weight: 500;
 }
 
-.home-container {
-}
 .visit-message-container {
+  background-color: var(--highlight-bg);
   color: var(--accent-color);
   padding: 1.5rem;
   border-radius: 10px;
@@ -1047,12 +1040,12 @@ input:required:valid {
 .attraction-card h2 {
   grid-area: title;
   font-size: 1.3rem;
-  color: var(--danger-color);
+  color: var(--highlight-title-bg);
   padding: 1.5rem 1.5rem 0.5rem;
   margin: 0;
 }
 .attraction-card figure {
-  grid-area: image;
+  grid-area: images;
   margin: 0;
   overflow: hidden;
   position: relative;
@@ -1071,7 +1064,7 @@ input:required:valid {
   grid-area: address;
   font-style: normal;
   padding: 1rem 1.5rem 0.5rem;
-  color: var(--color-dark-gray);
+  color: var(--nav-text);
   font-size: 0.9rem;
   font-weight: 500;
   display: flex;
@@ -1086,7 +1079,7 @@ input:required:valid {
 .attraction-card p {
   grid-area: description;
   padding: 0 1.5rem 1rem;
-  color: var(--color-dark-text);
+  color: var(--nav-text);
   line-height: 1.6;
   font-size: 0.95rem;
 }
@@ -1095,9 +1088,9 @@ input:required:valid {
   grid-area: button;
   margin: 0 1.5rem 1.5rem;
   padding: 0.8rem 1.5rem;
-  background-color: var(--color-primary-dark);
-  color: var(--color-light-text);
-  border: 2px solid var(--color-nav-hover);
+  background-color: var(--highlight-title-bg);
+  color: #1a1a1a;
+  border: none;
   border-radius: 5px;
   font-weight: 700;
   font-size: 0.9rem;
@@ -1106,7 +1099,8 @@ input:required:valid {
 }
 
 .attraction-card button:hover {
-  background-color: var(--color-nav-hover);
+  background-color: var(--accent-color);
+  color: var(--nav-text);
   transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 77, 153, 0.3);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
