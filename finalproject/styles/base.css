@@ -1,0 +1,937 @@
+:root {
+  /* Page body (home + every other page) */
+  --body-bg: #6d2266;
+  --body-text: #00ffd5;
+
+  /* Header + footer (same colors on purpose) */
+  --header-bg: #4a1546;
+  --header-text: #ffffff;
+  --header-hover: #00ffd5;
+
+  /* Cards, forms, popups (sit on top of the body) */
+  --card-bg: #ffffff;
+  --surface-alt: #f1e6f0; /* form section titles */
+  --text-color: #1d0b1b; /* text inside cards */
+  --muted-color: #5b4759; /* secondary text, placeholders */
+  --border-color: #d9c5d7; /* soft card outlines */
+
+  /* Brand */
+  --primary-color: #6d2266; /* headings inside cards */
+  --on-primary: #ffffff; /* text on --primary-color */
+  --accent-color: #00ffd5; /* button fill */
+  --on-accent: #2a0c27; /* text on --accent-color */
+  --accent-hover: #ffffff; /* button fill on hover */
+  --btn-border: #2a0c27; /* button outline */
+
+  /* Links inside cards */
+  --link-color: #6d2266;
+  --link-hover: #3a0d36;
+
+  /* Highlight bar (section titles, popups) */
+  --highlight-title-bg: #00ffd5;
+  --on-highlight: #2a0c27; /* text on --highlight-title-bg */
+
+  /* Home page skill cards + portfolio filter buttons */
+  --panel-bg: rgba(255, 255, 255, 0.08);
+  --panel-border: #00ffd5;
+  --filter-hover-bg: rgba(0, 255, 213, 0.18);
+
+  /* Form fields */
+  --input-bg: #ffffff;
+  --input-text: #1d0b1b;
+  --input-border: #7a6678;
+  --error-color: #c62828;
+  --success-color: #1b7f3b;
+  --focus-ring: rgba(109, 34, 102, 0.25); /* glow around a focused field */
+
+  /* Hero banners (same in both modes) */
+  --hero-text: #ffffff;
+  --hero-overlay: rgba(
+    30,
+    6,
+    28,
+    0.7
+  ); /* darkens the photo so text stays readable */
+}
+
+/* ===== DARK MODE OVERRIDES ===== */
+[data-theme="dark"] {
+  --body-bg: #2b0d28;
+
+  --header-bg: #ffffff;
+  --header-text: #6d2266;
+  --header-hover: #2a0c27;
+
+  --card-bg: #3b1437;
+  --surface-alt: #4c1c47;
+  --text-color: #f3e8f2;
+  --muted-color: #cdb8cb;
+  --border-color: #5d2c58;
+
+  --primary-color: #00ffd5;
+  --on-primary: #2a0c27;
+  --btn-border: #00ffd5;
+
+  --link-color: #00ffd5;
+  --link-hover: #ffffff;
+
+  --panel-bg: rgba(255, 255, 255, 0.06);
+
+  --input-bg: #22091f;
+  --input-text: #f3e8f2;
+  --input-border: #b08fab;
+  --error-color: #ff8a8a;
+  --success-color: #4cc38a;
+  --focus-ring: rgba(0, 255, 213, 0.35);
+}
+
+* {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
+  background-color: var(--body-bg);
+  color: var(--body-text);
+}
+a {
+  color: var(--link-color);
+}
+a:hover {
+  color: var(--link-hover);
+}
+
+:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+main > h1,
+.skills h2,
+.home-container .page-title {
+  color: var(--body-text);
+}
+.service-card h3 {
+  color: var(--primary-color);
+}
+
+/* HEADER  */
+
+header {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  gap: 1rem;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+
+/* LOGO AND COMPANY NAME */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+.logo img,
+footer img {
+  width: 40px;
+  height: 40px;
+}
+.hamburger {
+  background: transparent;
+  position: relative;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+.hamburger::before {
+  content: "\2630";
+  font-size: 1.8rem;
+  color: var(--header-text);
+}
+.hamburger.show::before {
+  content: "\00D7";
+}
+
+/* NAVIGATION ICON */
+.nav {
+  width: 100%;
+  order: 3; /* forces nav below logo/toggle row */
+}
+
+#nav-bar {
+  display: none;
+}
+#nav-bar.show {
+  display: block;
+}
+.navigation ul {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  align-items: flex-start;
+  gap: 1rem;
+  margin: 0;
+  padding: 0;
+}
+.navigation a {
+  text-decoration: none;
+  cursor: pointer;
+  color: var(--header-text);
+}
+.navigation a:hover {
+  color: var(--header-hover);
+}
+.navigation .current a {
+  text-decoration: underline;
+  font-weight: bolder;
+}
+.theme-toggle {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid var(--header-text);
+  background: linear-gradient(90deg, var(--header-text) 50%, transparent 50%);
+  cursor: pointer;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  padding: 1rem 2rem;
+  background-color: var(--header-bg);
+  color: var(--header-text);
+}
+.social-media {
+  display: flex;
+  gap: 2.5rem;
+}
+/* white icons on the purple footer (light mode) */
+.social-media img {
+  filter: brightness(0) invert(1);
+}
+/* dark icons on the white footer (dark mode) */
+[data-theme="dark"] .social-media img {
+  filter: brightness(0);
+}
+
+main > h1,
+main > div:not([class]),
+.top,
+.skills {
+  max-width: 1100px;
+  margin-inline: auto;
+  padding-inline: 1.5rem;
+}
+
+.top,
+.skills {
+  display: flex;
+  flex-direction: column;
+}
+.photo {
+  max-width: 500px;
+  width: 80%;
+  height: auto;
+  margin: 15px auto;
+  object-fit: cover;
+  justify-content: center;
+  align-items: center;
+}
+.desktop-photo {
+  display: none;
+}
+.mobile-photo {
+  display: block;
+}
+
+/* SKILL CARDS */
+.skills {
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+.skills > div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.5rem;
+  background-color: var(--panel-bg);
+  border: 2px solid var(--panel-border);
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.skills > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+.skills h2 {
+  margin: 0;
+  font-size: 1.25rem;
+}
+.skills p {
+  margin: 0;
+  line-height: 1.6;
+  flex-grow: 1; /* pushes the button to the bottom of every card */
+}
+.skills a {
+  align-self: center; /* centres the Read More button */
+  margin-top: 0.5rem;
+}
+
+/* ---------- HERO BANNER ---------- */
+.hero-container {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+}
+.hero-image {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.7;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: var(--hero-overlay);
+}
+.hero-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  color: var(--hero-text);
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+.hero-container .hero-content h1 {
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+  color: var(--hero-text);
+}
+.hero-container .hero-content p {
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0;
+}
+
+/* ---------- PAGE CONTAINER + CARD BOX ---------- */
+.home-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 3rem;
+}
+.home-container .page-title {
+  margin: 0 0 1.5rem;
+}
+.info-card {
+  padding: 1.5rem;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.home-container .info-card {
+  border: 2px solid var(--panel-border);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- BUTTON ---------- */
+.cta-button,
+.project-btn,
+.skills a {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  font: 700 1rem/1 sans-serif;
+  background-color: var(--accent-color);
+  color: var(--on-accent);
+  border: 2px solid var(--btn-border);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+}
+.cta-button:hover,
+.project-btn:hover,
+.skills a:hover {
+  background-color: var(--accent-hover);
+  color: var(--on-accent);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+.cta-button:active,
+.project-btn:active,
+.skills a:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* ---------- PAGE LAYOUT: form + sidebar ----------
+   Mobile: one column. Desktop (64rem): form 2fr, sidebar 1fr
+   (see large.css). */
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+/* ---------- FORM ---------- */
+/* The outer <section class="form-section info-card"> shares its class with
+   the <fieldset class="form-section"> elements. "section.form-section" is
+   more specific, so only the outer wrapper gets this padding. */
+section.form-section {
+  padding: 2rem;
+  margin-bottom: 0;
+}
+
+.contact-us input[type="text"],
+.contact-us input[type="email"],
+.contact-us input[type="tel"],
+.contact-us select,
+.contact-us textarea {
+  width: 100%;
+  padding: 0.75rem;
+  font-size: 0.95rem;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  border: 1px solid var(--input-border);
+  border-radius: 6px;
+  border-left: 4px solid var(--input-border);
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+.contact-us ::placeholder {
+  color: var(--muted-color);
+  opacity: 1;
+}
+
+.contact-us :is(input, select, textarea):required {
+  border-left-color: var(--primary-color);
+}
+
+/* hover */
+.contact-us :is(input, select, textarea):hover {
+  border-color: var(--primary-color);
+}
+
+/* focus */
+.contact-us :is(input, select, textarea):focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px var(--focus-ring);
+}
+
+/* invalid (after the visitor touched it or pressed Send) */
+.contact-us :is(input, select, textarea):user-invalid {
+  border-color: var(--error-color);
+}
+
+/* valid */
+.contact-us :is(input, select, textarea):user-valid {
+  border-color: var(--success-color);
+}
+
+/* select: custom arrow drawn with CSS (follows the text color in both modes) */
+.contact-us select {
+  appearance: none;
+  padding-right: 2.5rem;
+  cursor: pointer;
+  background-image:
+    linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position:
+    calc(100% - 20px) 50%,
+    calc(100% - 14px) 50%;
+  background-size:
+    6px 6px,
+    6px 6px;
+  background-repeat: no-repeat;
+}
+.contact-us select option {
+  background-color: var(--input-bg);
+  color: var(--input-text);
+}
+
+/* textarea */
+.contact-us textarea {
+  min-height: 8rem;
+  resize: vertical;
+}
+/* fieldset groups (Personal Information / Project Information) */
+.form-section {
+  border: none;
+  padding: 0;
+  margin-bottom: 2rem;
+}
+.section-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-color);
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  display: block;
+  background-color: var(--surface-alt);
+}
+.fieldset-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+/* label + input */
+.form-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.label-text {
+  font-weight: 500;
+  color: var(--text-color);
+  font-size: 0.95rem;
+}
+.form-label.full-width {
+  grid-column: 1 / -1;
+}
+
+/* submit button */
+.submit-button-container {
+  margin-top: 2rem;
+}
+.submit-btn {
+  width: 100%;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.submit-btn:hover {
+  background-color: var(--accent-hover);
+  color: var(--on-accent);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.4);
+}
+/* pressed: button pushes back down */
+.submit-btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+/* keyboard focus: ring that shows on both the white card and the purple page */
+.submit-btn:focus-visible {
+  outline: 3px solid var(--primary-color);
+  outline-offset: 3px;
+}
+
+/* ---------- SIDEBAR: Services + Contact Details ---------- */
+.contact-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.levels-section {
+  display: flex;
+  flex-direction: column;
+}
+.info-box {
+  padding: 2rem;
+}
+.section-heading-small {
+  font-size: 1.3rem;
+  color: var(--on-highlight);
+  background: var(--highlight-title-bg);
+  margin: -2rem -2rem 1rem -2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px 10px 0 0;
+  font-weight: 700;
+}
+.section-intro {
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+  overflow-wrap: break-word;
+}
+
+/* ---------- SERVICE CARDS ---------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+.service-card {
+  border-radius: 8px;
+  padding: 1.25rem;
+  text-align: center;
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInSlideUp 1s ease-out forwards;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.service-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.75rem;
+  font-weight: 600;
+}
+.service-card .modal-link {
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: transparent;
+  color: var(--text-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.service-card .modal-link:hover {
+  background-color: var(--accent-color);
+  color: var(--on-accent);
+}
+
+/* cards fade in one after another */
+.card-grid .service-card:nth-child(1) {
+  animation-delay: 0.2s;
+}
+.card-grid .service-card:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.card-grid .service-card:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.card-grid .service-card:nth-child(4) {
+  animation-delay: 0.8s;
+}
+
+@keyframes fadeInSlideUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ---------- SERVICE DETAIL DIALOGS ---------- */
+.service-modal {
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 0;
+  background-color: var(--highlight-title-bg);
+  color: var(--on-highlight);
+  box-shadow: 0 0 3rem rgba(0, 0, 0, 0.3);
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+}
+.service-modal::backdrop {
+  background-color: rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.3s ease-out;
+}
+.service-modal h3 {
+  margin-top: 0;
+  padding: 0;
+  background: none;
+  border-radius: 0;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.service-modal p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+.service-modal ul {
+  list-style: disc;
+  margin-left: 1.5rem;
+  padding-left: 0;
+  line-height: 1.8;
+}
+.service-modal li {
+  margin-bottom: 0.5rem;
+}
+.close-modal {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  padding: 0.5rem 1rem;
+  font-size: 1.5rem;
+  background: none;
+  border: none;
+  color: var(--on-highlight);
+  font-weight: 300;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+.close-modal:hover {
+  transform: scale(1.1);
+}
+.modal-body {
+  padding: 2rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.thankyou-container {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.submitted-data-card {
+  padding: 2rem;
+  text-align: left;
+  margin: 2rem 0;
+}
+
+.submitted-data-card h3 {
+  color: var(--on-primary);
+  background: var(--primary-color);
+  margin: -2rem -2rem 1.5rem -2rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px 10px 0 0;
+  font-weight: 700;
+}
+
+.submitted-data-card ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.submitted-data-card li {
+  padding: 0.75rem 0;
+  border-bottom: 1px dashed var(--border-color);
+  font-size: 1.05rem;
+  color: var(--text-color);
+}
+
+.submitted-data-card li:last-child {
+  border-bottom: none;
+}
+
+.submitted-data-card li strong {
+  font-weight: 600;
+  color: var(--primary-color);
+  display: inline-block;
+  min-width: 150px;
+}
+
+.back-to-home-btn {
+  margin-top: 1.5rem;
+}
+
+.portfolio-hero {
+  position: relative;
+  width: 100%;
+  height: 150px;
+  overflow: hidden;
+  margin-bottom: 0;
+}
+.portfolio-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.portfolio-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--hero-overlay);
+}
+.portfolio-hero-content {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  text-align: center;
+  z-index: 2;
+}
+.portfolio-hero-content h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0.75rem;
+  font-weight: 700;
+  color: var(--hero-text);
+  letter-spacing: 1px;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+
+.portfolio-hero-content p {
+  font-size: 0.95rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--hero-text);
+  font-weight: 500;
+}
+
+.visit-message-container {
+  background-color: var(--accent-color);
+  color: var(--on-accent);
+  padding: 1.5rem;
+  border-radius: 10px;
+  margin-bottom: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideDown 0.5s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* FILTER BUTTONS (All, Data Cleaning, ...) */
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+.filter-btn {
+  padding: 0.6rem 1.25rem;
+  font: 600 0.95rem/1 sans-serif;
+  background-color: transparent;
+  color: var(--body-text);
+  border: 2px solid var(--panel-border);
+  border-radius: 999px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease,
+    transform 0.2s ease;
+}
+/* hover effect */
+.filter-btn:hover {
+  background-color: var(--filter-hover-bg);
+  transform: translateY(-2px);
+}
+/* pressed effect (while the mouse is held down) */
+.filter-btn:active {
+  transform: translateY(0) scale(0.97);
+}
+/* active effect (the selected category) */
+.filter-btn.active {
+  background-color: var(--accent-color);
+  color: var(--on-accent);
+  font-weight: 700;
+}
+
+/* PROJECT GRID (stacked on mobile; grid from 38rem, see large.css) */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+/* PROJECT CARD (built by displayProjects() in main.js) */
+.project-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+.project-content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  flex: 1;
+}
+.project-content h2 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: var(--primary-color);
+}
+.project-content p {
+  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+.project-content .project-category {
+  align-self: flex-start;
+  padding: 0.2rem 0.75rem;
+  background-color: var(--accent-color);
+  color: var(--on-accent);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+.project-content .project-tools {
+  color: var(--muted-color);
+  font-size: 0.9rem;
+}
+.project-btn {
+  align-self: flex-start;
+  margin-top: auto; /* keeps the button at the bottom of every card */
+}

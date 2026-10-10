@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "title": "Customer Data Cleaning",
+    "category": "Data Cleaning",
+    "description": "Cleaned a customer dataset by handling missing values, correcting data types, and removing duplicate records.",
+    "tools": ["Excel", "Python", "Pandas"],
+    "image": "images/hero-image.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 2,
+    "title": "Sales Performance Dashboard",
+    "category": "Data Visualization",
+    "description": "Created a dashboard to help users understand sales performance, trends, and key business metrics.",
+    "tools": ["Power BI", "Excel"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 3,
+    "title": "Bank Customer Analysis",
+    "category": "Data Query",
+    "description": "Used SQL queries to explore customer data, summarize business results, and answer analytical questions.",
+    "tools": ["SQL", "MySQL"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 4,
+    "title": "HR Data Cleaning",
+    "category": "Data Cleaning",
+    "description": "Prepared employee data for analysis by checking data quality and standardizing inconsistent values.",
+    "tools": ["Excel", "SQL"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 5,
+    "title": "HR Analytics Dashboard",
+    "category": "Data Visualization",
+    "description": "Presented workforce metrics and employee trends in an interactive dashboard.",
+    "tools": ["Power BI", "Excel"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 6,
+    "title": "Customer Churn Queries",
+    "category": "Data Query",
+    "description": "Used SQL to investigate customer churn and summarize patterns that could support business decisions.",
+    "tools": ["SQL Server", "SQL"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  }
+]

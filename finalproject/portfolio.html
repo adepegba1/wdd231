@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="David Adepegba">
+    <meta name="description" content="">
+
+
+
+    <!-- FACEBOOK META  -->
+    <meta og.title="" content="">
+    <meta og.description="" content="">
+    <meta og.url="" content="">
+    <meta og.image="" content="">
+
+
+    <title>Portfolio - D Analyst</title>
+
+    <!-- STYLESHEET  -->
+    <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/large.css">
+
+    <!-- ICON IMAGE -->
+    <link rel="shortcut icon" href="images/logo.svg" type="image/x-icon">
+
+    <!-- SCRIPT  -->
+    <script src="scripts/main.js" defer></script>
+
+    <!-- GOOGLE FONT  -->
+
+</head>
+
+<header>
+    <div class="logo">
+        <img src="images/logo.svg" alt="Company Logo">
+        <span>D-Analyst</span>
+        <button id="ham-btn" class="hamburger" aria-label="hamburger"></button>
+    </div>
+
+    <div class="nav">
+        <nav id="nav-bar" class="navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li class="current"><a href="portfolio.html">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><button class="theme-toggle" aria-label="Toggle dark mode"></button></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+
+    <!-- Reuse the Discover page hero classes -->
+    <section class="portfolio-hero">
+        <img class="portfolio-hero-image" loading="eager" src="images/portfolio-hero.jpg"
+            alt="Data analytics and business insights">
+
+        <div class="portfolio-hero-overlay">
+            <div class="portfolio-hero-content">
+                <h1>My Projects</h1>
+                <p>
+                    Explore my data analytics projects, including
+                    data cleaning, data visualization, and SQL queries.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reuse the Discover page content container -->
+    <div class="home-container">
+
+        <!-- JavaScript displays the visit count here -->
+        <div id="visitMessage" class="visit-message-container" aria-live="polite">
+        </div>
+
+        <!-- Portfolio heading -->
+        <h2 class="page-title">My Data Analytics Portfolio</h2>
+
+        <!-- Project category filters -->
+        <div class="project-filters" role="group" aria-label="Filter projects by category">
+
+            <button type="button" class="filter-btn active" data-category="All" aria-pressed="true">
+                All Projects
+            </button>
+
+            <button type="button" class="filter-btn" data-category="Data Cleaning" aria-pressed="false">
+                Data Cleaning
+            </button>
+
+            <button type="button" class="filter-btn" data-category="Data Visualization" aria-pressed="false">
+                Data Visualization
+            </button>
+
+            <button type="button" class="filter-btn" data-category="Data Query" aria-pressed="false">
+                Data Query
+            </button>
+
+        </div>
+
+        <!-- JavaScript inserts project cards into this grid -->
+        <div id="projectsGrid" class="projects-grid" aria-live="polite">
+        </div>
+
+    </div>
+</main>
+
+<footer>
+    <!-- COMPANY INFORMATION  -->
+    <div class="company">
+        <p><strong>D-Analyst</strong></p>
+        <p>13/15 Segun Irefin Street</p>
+        <p>Lagos, Nigeria</p>
+        <p>adepegbadavid2@gmail.com</p>
+        <p>(234) 813 792 4205</p>
+    </div>
+    <!-- SOCIAL MEDIA  -->
+    <div class="social-media">
+        <a href=""><img src="images/github.svg" alt="GitHub Logo"></a>
+        <a href="https://www.linkedin.com/in/adepegbadavid1/"><img src="images/linkedin.svg" alt="LinkedIn Logo"></a>
+        <a href="https://x.com/adepegbadavid1"><img src="images/twitter.svg" alt="Twitter Logo"></a>
+    </div>
+
+    <div class="student">
+        <p><strong>WDD231 Project</strong></p>
+        <p>David Adepegba</p>
+        <p>&copy; <span id="currentyear"></span> All right reserved</p>
+        <p>Last Modification: <span id="lastModified"></span></p>
+    </div>
+</footer>
+
+<body>
+
+</body>
+
+</html>
