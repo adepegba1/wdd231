@@ -1,100 +1,127 @@
 :root {
-  /* Page body (home + every other page) */
-  --body-bg: #6d2266;
-  --body-text: #00ffd5;
 
+    /* Font families (use these variables instead of typing font names) */
+  --font-heading: "Vidaloka", Georgia, "Times New Roman", serif;
+  --font-body: "Almendra", Georgia, "Times New Roman", serif;
+  
+  * Page + surfaces */
+  --bg-color: #f7f3ea; /* page background (parchment) */
+  --card-bg: #ffffff; /* cards, form box, sidebar boxes */
+  --surface-alt: #efe8d8; /* form section titles */
+ 
   /* Header + footer (same colors on purpose) */
-  --header-bg: #4a1546;
-  --header-text: #ffffff;
-  --header-hover: #00ffd5;
-
-  /* Cards, forms, popups (sit on top of the body) */
-  --card-bg: #ffffff;
-  --surface-alt: #f1e6f0; /* form section titles */
-  --text-color: #1d0b1b; /* text inside cards */
-  --muted-color: #5b4759; /* secondary text, placeholders */
-  --border-color: #d9c5d7; /* soft card outlines */
-
+  --header-bg: #1f2a44;
+  --header-text: #f7f3ea;
+  --header-hover: #f2c14e;
+ 
+  /* Text + borders */
+  --text-color: #1c2333; /* main text */
+  --muted-color: #50586b; /* secondary text, placeholders */
+  --border-color: #d8cfbd; /* soft card outlines */
+ 
   /* Brand */
-  --primary-color: #6d2266; /* headings inside cards */
+  --primary-color: #1f2a44; /* headings, strong borders, focus rings */
   --on-primary: #ffffff; /* text on --primary-color */
-  --accent-color: #00ffd5; /* button fill */
-  --on-accent: #2a0c27; /* text on --accent-color */
-  --accent-hover: #ffffff; /* button fill on hover */
-  --btn-border: #2a0c27; /* button outline */
-
+  --accent-color: #f2c14e; /* button fill (gold) */
+  --on-accent: #1c2333; /* text on --accent-color */
+  --accent-hover: #ffe08a; /* button fill on hover */
+  --btn-border: #1c2333; /* button outline */
+ 
   /* Links inside cards */
-  --link-color: #6d2266;
-  --link-hover: #3a0d36;
-
+  --link-color: #1d4ea0;
+  --link-hover: #0f2f6b;
+ 
   /* Highlight bar (section titles, popups) */
-  --highlight-title-bg: #00ffd5;
-  --on-highlight: #2a0c27; /* text on --highlight-title-bg */
-
-  /* Home page skill cards + portfolio filter buttons */
-  --panel-bg: rgba(255, 255, 255, 0.08);
-  --panel-border: #00ffd5;
-  --filter-hover-bg: rgba(0, 255, 213, 0.18);
-
+  --highlight-title-bg: #f2c14e;
+  --on-highlight: #1c2333; /* text on --highlight-title-bg */
+ 
+  /* Portfolio filter buttons */
+  --filter-hover-bg: rgba(31, 42, 68, 0.08);
+ 
   /* Form fields */
   --input-bg: #ffffff;
-  --input-text: #1d0b1b;
-  --input-border: #7a6678;
-  --error-color: #c62828;
-  --success-color: #1b7f3b;
-  --focus-ring: rgba(109, 34, 102, 0.25); /* glow around a focused field */
-
+  --input-text: #1c2333;
+  --input-border: #7b7466;
+  --error-color: #b3261e;
+  --success-color: #1b6e3a;
+  --focus-ring: rgba(31, 42, 68, 0.25); /* glow around a focused field */
+ 
   /* Hero banners (same in both modes) */
   --hero-text: #ffffff;
-  --hero-overlay: rgba(
-    30,
-    6,
-    28,
-    0.7
-  ); /* darkens the photo so text stays readable */
+  --hero-overlay: rgba(12, 16, 28, 0.68); /* darkens the photo so text stays readable */
+
 }
 
 /* ===== DARK MODE OVERRIDES ===== */
 [data-theme="dark"] {
-  --body-bg: #2b0d28;
-
-  --header-bg: #ffffff;
-  --header-text: #6d2266;
-  --header-hover: #2a0c27;
-
-  --card-bg: #3b1437;
-  --surface-alt: #4c1c47;
-  --text-color: #f3e8f2;
-  --muted-color: #cdb8cb;
-  --border-color: #5d2c58;
-
-  --primary-color: #00ffd5;
-  --on-primary: #2a0c27;
-  --btn-border: #00ffd5;
-
-  --link-color: #00ffd5;
-  --link-hover: #ffffff;
-
-  --panel-bg: rgba(255, 255, 255, 0.06);
-
-  --input-bg: #22091f;
-  --input-text: #f3e8f2;
-  --input-border: #b08fab;
-  --error-color: #ff8a8a;
-  --success-color: #4cc38a;
-  --focus-ring: rgba(0, 255, 213, 0.35);
+  --bg-color: #12151f;
+  --card-bg: #1b2030;
+  --surface-alt: #262d42;
+ 
+  --header-bg: #1f2638;
+  --header-text: #f1ece0;
+  --header-hover: #f2c14e;
+ 
+  --text-color: #ece8dd;
+  --muted-color: #b5bac8;
+  --border-color: #353d57;
+ 
+  --primary-color: #f2c14e;
+  --on-primary: #1c2333;
+  --btn-border: #f2c14e;
+ 
+  --link-color: #8fb8ff;
+  --link-hover: #c3d8ff;
+ 
+  --filter-hover-bg: rgba(242, 193, 78, 0.14);
+ 
+  --input-bg: #141826;
+  --input-text: #ece8dd;
+  --input-border: #8d93a6;
+  --error-color: #ff8a80;
+  --success-color: #5ccf8f;
+  --focus-ring: rgba(242, 193, 78, 0.35);
 }
 
 * {
   box-sizing: border-box;
+}
+
+html {
+  font-size: 112.5%;
+}
+
+/* HEADINGS use Vidaloka. It only comes in one weight (400), so fake bold is
+   switched off, otherwise the browser smears the letters to imitate bold. */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+legend,
+.logo span {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  font-synthesis-weight: none;
+}
+ 
+/* Buttons and form fields ignore the page font unless told to inherit it */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
 }
 body {
   overflow-x: hidden;
   transition:
     background-color 0.3s ease,
     color 0.3s ease;
-  background-color: var(--body-bg);
-  color: var(--body-text);
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-body);
+  line-height: 1.6;
 }
 a {
   color: var(--link-color);
@@ -104,13 +131,20 @@ a:hover {
 }
 
 :focus-visible {
-  outline: 3px solid var(--accent-color);
+  outline: 3px solid var(--primary-color);
   outline-offset: 2px;
 }
+
+/* the header and footer are dark in both modes, so they get a light ring */
+header :focus-visible,
+footer :focus-visible {
+  outline-color: var(--header-text);
+}
+
 main > h1,
 .skills h2,
 .home-container .page-title {
-  color: var(--body-text);
+  color: var(--primary-color);
 }
 .service-card h3 {
   color: var(--primary-color);
@@ -221,10 +255,7 @@ footer {
 .social-media img {
   filter: brightness(0) invert(1);
 }
-/* dark icons on the white footer (dark mode) */
-[data-theme="dark"] .social-media img {
-  filter: brightness(0);
-}
+
 
 main > h1,
 main > div:not([class]),
@@ -266,8 +297,8 @@ main > div:not([class]),
   flex-direction: column;
   gap: 0.75rem;
   padding: 1.5rem;
-  background-color: var(--panel-bg);
-  border: 2px solid var(--panel-border);
+  background-color: var(--card-bg);
+  border: 2px solid var(--primary-color);
   border-radius: 12px;
   transition:
     transform 0.3s ease,
@@ -354,7 +385,7 @@ main > div:not([class]),
 }
 
 .home-container .info-card {
-  border: 2px solid var(--panel-border);
+  border: 2px solid var(--primary-color);
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
@@ -364,7 +395,7 @@ main > div:not([class]),
 .skills a {
   display: inline-block;
   padding: 0.8rem 2rem;
-  font: 700 1rem/1 sans-serif;
+  font: 700 1rem/1 var(--font-body);
   background-color: var(--accent-color);
   color: var(--on-accent);
   border: 2px solid var(--btn-border);
@@ -374,6 +405,7 @@ main > div:not([class]),
   transition:
     background-color 0.3s ease,
     transform 0.3s ease;
+  text-decoration: none;
 }
 .cta-button:hover,
 .project-btn:hover,
@@ -842,10 +874,10 @@ section.form-section {
 }
 .filter-btn {
   padding: 0.6rem 1.25rem;
-  font: 600 0.95rem/1 sans-serif;
+  font: 600 0.95rem/1 var(--font-body);
   background-color: transparent;
   color: var(--body-text);
-  border: 2px solid var(--panel-border);
+  border: 2px solid var(--primary-color);
   border-radius: 999px;
   cursor: pointer;
   transition:
