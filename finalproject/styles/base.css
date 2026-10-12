@@ -1,24 +1,23 @@
 :root {
-
-    /* Font families (use these variables instead of typing font names) */
+  /* Font families (use these variables instead of typing font names) */
   --font-heading: "Vidaloka", Georgia, "Times New Roman", serif;
   --font-body: "Almendra", Georgia, "Times New Roman", serif;
-  
-  * Page + surfaces */
+
+  /* Page + surfaces */
   --bg-color: #f7f3ea; /* page background (parchment) */
   --card-bg: #ffffff; /* cards, form box, sidebar boxes */
   --surface-alt: #efe8d8; /* form section titles */
- 
+
   /* Header + footer (same colors on purpose) */
   --header-bg: #1f2a44;
   --header-text: #f7f3ea;
   --header-hover: #f2c14e;
- 
+
   /* Text + borders */
   --text-color: #1c2333; /* main text */
   --muted-color: #50586b; /* secondary text, placeholders */
   --border-color: #d8cfbd; /* soft card outlines */
- 
+
   /* Brand */
   --primary-color: #1f2a44; /* headings, strong borders, focus rings */
   --on-primary: #ffffff; /* text on --primary-color */
@@ -26,18 +25,18 @@
   --on-accent: #1c2333; /* text on --accent-color */
   --accent-hover: #ffe08a; /* button fill on hover */
   --btn-border: #1c2333; /* button outline */
- 
+
   /* Links inside cards */
   --link-color: #1d4ea0;
   --link-hover: #0f2f6b;
- 
+
   /* Highlight bar (section titles, popups) */
   --highlight-title-bg: #f2c14e;
   --on-highlight: #1c2333; /* text on --highlight-title-bg */
- 
+
   /* Portfolio filter buttons */
   --filter-hover-bg: rgba(31, 42, 68, 0.08);
- 
+
   /* Form fields */
   --input-bg: #ffffff;
   --input-text: #1c2333;
@@ -45,11 +44,15 @@
   --error-color: #b3261e;
   --success-color: #1b6e3a;
   --focus-ring: rgba(31, 42, 68, 0.25); /* glow around a focused field */
- 
+
   /* Hero banners (same in both modes) */
   --hero-text: #ffffff;
-  --hero-overlay: rgba(12, 16, 28, 0.68); /* darkens the photo so text stays readable */
-
+  --hero-overlay: rgba(
+    12,
+    16,
+    28,
+    0.68
+  ); /* darkens the photo so text stays readable */
 }
 
 /* ===== DARK MODE OVERRIDES ===== */
@@ -57,24 +60,24 @@
   --bg-color: #12151f;
   --card-bg: #1b2030;
   --surface-alt: #262d42;
- 
+
   --header-bg: #1f2638;
   --header-text: #f1ece0;
   --header-hover: #f2c14e;
- 
+
   --text-color: #ece8dd;
   --muted-color: #b5bac8;
   --border-color: #353d57;
- 
+
   --primary-color: #f2c14e;
   --on-primary: #1c2333;
   --btn-border: #f2c14e;
- 
+
   --link-color: #8fb8ff;
   --link-hover: #c3d8ff;
- 
+
   --filter-hover-bg: rgba(242, 193, 78, 0.14);
- 
+
   --input-bg: #141826;
   --input-text: #ece8dd;
   --input-border: #8d93a6;
@@ -105,7 +108,7 @@ legend,
   font-weight: 400;
   font-synthesis-weight: none;
 }
- 
+
 /* Buttons and form fields ignore the page font unless told to inherit it */
 button,
 input,
@@ -146,7 +149,6 @@ main > h1,
 .home-container .page-title {
   color: var(--primary-color);
 }
-
 
 /* HEADER  */
 
@@ -253,7 +255,6 @@ footer {
 .social-media img {
   filter: brightness(0) invert(1);
 }
-
 
 main > h1,
 main > div:not([class]),
