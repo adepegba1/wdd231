@@ -247,6 +247,15 @@ footer {
   background-color: var(--header-bg);
   color: var(--header-text);
 }
+.student a {
+  text-decoration: none;
+  text-transform: uppercase;
+  color: var(--header-text);
+  cursor: pointer;
+}
+.student a:hover {
+  color: var(--accent-color);
+}
 .social-media {
   display: flex;
   gap: 2.5rem;
