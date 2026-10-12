@@ -146,9 +146,7 @@ main > h1,
 .home-container .page-title {
   color: var(--primary-color);
 }
-.service-card h3 {
-  color: var(--primary-color);
-}
+
 
 /* HEADER  */
 
@@ -399,7 +397,6 @@ main > div:not([class]),
   background-color: var(--accent-color);
   color: var(--on-accent);
   border: 2px solid var(--btn-border);
-  border: none;
   border-radius: 5px;
   cursor: pointer;
   transition:
@@ -633,7 +630,9 @@ section.form-section {
   font-size: 1.1rem;
   margin-bottom: 0.75rem;
   font-weight: 600;
+  color: var(--primary-color);
 }
+
 .service-card .modal-link {
   font-weight: 600;
   font-size: 0.9rem;
