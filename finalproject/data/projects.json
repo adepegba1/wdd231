@@ -52,5 +52,131 @@
     "tools": ["SQL Server", "SQL"],
     "image": "images/discover-hero.jpg",
     "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 7,
+    "title": "Retail Sales Data Cleaning",
+    "category": "Data Cleaning",
+    "description": "Standardized product names, fixed date formats, and removed duplicate transactions in a retail sales file.",
+    "tools": ["Excel", "Power Query"],
+    "image": "images/portfolio-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 8,
+    "title": "Inventory Tracking Dashboard",
+    "category": "Data Visualization",
+    "description": "Built a dashboard showing stock levels, reorder points, and slow-moving items for a logistics team.",
+    "tools": ["Power BI", "Excel"],
+    "image": "images/hero-image.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 9,
+    "title": "Product Sales Ranking Queries",
+    "category": "Data Query",
+    "description": "Wrote SQL queries to rank products by revenue and find the top performers by region.",
+    "tools": ["SQL", "MySQL"],
+    "image": "images/portfolio-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 10,
+    "title": "Survey Response Cleaning",
+    "category": "Data Cleaning",
+    "description": "Cleaned survey responses by fixing inconsistent answers, handling blanks, and recoding categories.",
+    "tools": ["Excel", "Python"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 11,
+    "title": "Customer Segmentation Dashboard",
+    "category": "Data Visualization",
+    "description": "Grouped customers by spending and activity, then displayed the segments in an interactive dashboard.",
+    "tools": ["Tableau", "SQL"],
+    "image": "images/portfolio-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 12,
+    "title": "Monthly Revenue Report Queries",
+    "category": "Data Query",
+    "description": "Used SQL aggregations to produce monthly revenue and growth figures for management reports.",
+    "tools": ["SQL Server", "SQL"],
+    "image": "images/hero-image.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 13,
+    "title": "Logistics Delivery Data Cleaning",
+    "category": "Data Cleaning",
+    "description": "Digitised delivery records and corrected inconsistent addresses and delivery times using Power Query.",
+    "tools": ["Excel", "Power Query"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 14,
+    "title": "Delivery Performance Dashboard",
+    "category": "Data Visualization",
+    "description": "Tracked on-time delivery rates and processing delays across routes using KPI charts.",
+    "tools": ["Power BI", "Excel"],
+    "image": "images/portfolio-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 15,
+    "title": "Inventory Reorder Analysis",
+    "category": "Data Query",
+    "description": "Queried stock movement data to find items running low and estimate reorder quantities.",
+    "tools": ["SQL", "MySQL"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 16,
+    "title": "Financial Transactions Cleaning",
+    "category": "Data Cleaning",
+    "description": "Validated transaction records, flagged outliers, and fixed mismatched data types before analysis.",
+    "tools": ["Python", "Pandas"],
+    "image": "images/hero-image.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 17,
+    "title": "Marketing Campaign Dashboard",
+    "category": "Data Visualization",
+    "description": "Compared campaign reach, clicks, and conversions to show which channels performed best.",
+    "tools": ["Power BI", "Excel"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 18,
+    "title": "Employee Attendance Queries",
+    "category": "Data Query",
+    "description": "Used SQL joins and grouping to summarize attendance and absence patterns by department.",
+    "tools": ["SQL Server", "SQL"],
+    "image": "images/portfolio-hero.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 19,
+    "title": "Product Catalogue Cleaning",
+    "category": "Data Cleaning",
+    "description": "Merged product lists from several sources and removed duplicate and incomplete entries.",
+    "tools": ["Excel", "Power Query"],
+    "image": "images/hero-image.jpg",
+    "link": "https://github.com/adepegba1"
+  },
+  {
+    "id": 20,
+    "title": "KPI Performance Scorecard",
+    "category": "Data Visualization",
+    "description": "Created a one-page scorecard that tracks key performance indicators against monthly targets.",
+    "tools": ["Tableau", "Excel"],
+    "image": "images/discover-hero.jpg",
+    "link": "https://github.com/adepegba1"
   }
 ]
